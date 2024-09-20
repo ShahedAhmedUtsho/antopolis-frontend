@@ -39,7 +39,11 @@ const CatModel = () => {
 
     return (
         <section className="w-screen h-screen fixed flex justify-center items-center  left-0 top-0 bg-black/50 ">
-            <form onSubmit={saveCategoryHandle} className="md:w-[380px] md:min-h-[233px] flex flex-col text-black text-lg leading-3 py-9 px-6 border  rounded-3xl bg-white border-[#141414]">
+            <form onSubmit={saveCategoryHandle} className="md:w-[380px] relative md:min-h-[233px] flex flex-col text-black text-lg leading-3 py-9 px-6 border  rounded-3xl bg-white border-[#141414]">
+                <span onClick={() => {
+
+                    setCatModel(false)
+                }} className="absolute  right-6 top-5  text-white/90 h-6 cursor-pointer w-6  leading-none bg-black  grid pb-1 justify-center items-center border rounded-full">x</span>
                 <h6>
                     Add Category
                 </h6>

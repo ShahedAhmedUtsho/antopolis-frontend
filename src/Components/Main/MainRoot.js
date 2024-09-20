@@ -32,6 +32,7 @@ const MainRoot = () => {
                                     src={item?.photoUrl}
                                     alt={item?.name || 'Image'}
                                     fill
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                     placeholder='blur'
                                     className='object-contain '
                                     blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."

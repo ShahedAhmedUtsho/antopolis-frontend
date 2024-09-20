@@ -176,7 +176,7 @@ const Provider = ({ children }) => {
     if (cateLoading) {
         return <div className=' w-screen left-0 top-0 right-0 bottom-0   flex justify-center items-center h-screen'>
 
-            <BeatLoader size="35" color='white' className='text-white' />
+            <BeatLoader size="20px" color='white' className='text-white' />
 
         </div>;
     }

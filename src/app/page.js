@@ -22,7 +22,11 @@ export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <Provider>
-        <MainRoot />
+        <div className="container">
+          <MainRoot />
+
+        </div>
+
       </Provider>
     </QueryClientProvider>
 

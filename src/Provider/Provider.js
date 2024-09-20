@@ -2,6 +2,7 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
+import { BarLoader, BeatLoader } from 'react-spinners';
 
 
 export const ProviderContext = createContext()
@@ -137,7 +138,8 @@ const Provider = ({ children }) => {
                 setFormError(error.message)
             }
             finally {
-
+                e.target.reset();
+                setSelectedFile(null)
                 setUploading(false);
 
             }
@@ -172,7 +174,11 @@ const Provider = ({ children }) => {
     }
 
     if (cateLoading) {
-        return <div>Loading categories...</div>;
+        return <div className=' w-screen left-0 top-0 right-0 bottom-0   flex justify-center items-center h-screen'>
+
+            <BeatLoader size="35" color='white' className='text-white' />
+
+        </div>;
     }
 
     if (cateError) {

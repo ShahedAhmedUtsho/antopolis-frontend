@@ -4,6 +4,7 @@ import React, { useContext, useState } from 'react';
 import AnimalModel from '../Models/AnimalModel';
 import CatModel from '../Models/CatModel';
 import NavSection from '../NavSection/NavSection';
+import Image from 'next/image';
 
 const MainRoot = () => {
     const { selectedFile, setSelectedFile, catModel, setCatModel, animalModel, setAnimalModel, showImages, setShowImages } = useProvider()
@@ -17,23 +18,32 @@ const MainRoot = () => {
 
     return (
 
-        <main className="w-screen min-h-screen bg-black/95  lg:p-20 md:py-5 md:px-5">
+        <main className="w-screen min-h-screen  bg-black/95   lg:p-20 md:py-5 md:px-5">
             <NavSection />
 
 
 
-            <section className='min-h-60 bg-slate-900 flex gap-4 '>
+            <section className='min-h-60  flex flex-wrap gap-4'>
                 {
-                    showImages && showImages?.map((item, index) => <div key={item._id} className='border border-white/50 w-40 h-40'>
-
-
-                    </div>)
+                    showImages && showImages.map((item) => (
+                        <div key={item._id} className=' w-48  flex flex-col h-64'>
+                            <div className="relative h-52 rounded-md   w-full">
+                                <Image
+                                    src={item?.photoUrl}
+                                    alt={item?.name || 'Image'}
+                                    fill
+                                    placeholder='blur'
+                                    className='object-contain '
+                                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
+                                />
+                            </div>
+                            <h6 className='text-center text-white/80 mt-2 uppercase text-lg '>
+                                {item.name}
+                            </h6>
+                        </div>
+                    ))
                 }
-
-
             </section>
-
-
 
 
 

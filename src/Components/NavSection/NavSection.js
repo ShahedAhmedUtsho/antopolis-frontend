@@ -8,8 +8,8 @@ const NavSection = () => {
 
 
     return (
-        <section className=" min-h-28 flex justify-between  items-center">
-            <aside className="left flex gap-5 ">
+        <section className=" min-h-28 flex justify-between flex-wrap gap-5  items-center">
+            <aside className="left flex gap-5 flex-wrap ">
                 {
                     categories.map((item, index) => {
 
@@ -22,7 +22,7 @@ const NavSection = () => {
                     })
                 }
             </aside>
-            <aside className="right left flex gap-5  ">
+            <aside className="right left flex gap-5 flex-wrap  ">
                 <button onClick={() => { setCatModel(false); setAnimalModel(true) }} className={`inline-block transition-all duration-100 ease-linear   text-white hover:bg-white/95 hover:text-black active:scale-90 cursor-pointer rounded-full py-3 px-8 border-2 border-current capitalize`}  >
                     Add Animal
                 </button>

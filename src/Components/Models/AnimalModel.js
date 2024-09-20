@@ -48,7 +48,7 @@ const AnimalModel = () => {
 
 
                 <button type='submit' className=" mt-auto text-lg text-white bg-black rounded-lg w-full h-12 ">
-                    {uploading ? "Saving..." : "save"}
+                    {uploading ? "Creating..." : "Create Animal"}
 
 
                 </button>

@@ -23,7 +23,7 @@ const MainRoot = () => {
 
 
 
-            <section className='min-h-60  flex flex-wrap gap-4'>
+            <section className='min-h-60 mt-10  flex flex-wrap gap-4'>
                 {
                     showImages && showImages.map((item) => (
                         <div key={item._id} className=' w-48  flex flex-col h-64'>

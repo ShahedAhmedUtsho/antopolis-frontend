@@ -1,8 +1,7 @@
 'use client'
 
-import MainRoot from "@/Components/Main/MainRoot";
-import Provider from "@/Provider/Provider";
-import { split } from "postcss/lib/list";
+
+
 import { useEffect, useState } from "react";
 import {
   useQuery,
@@ -11,6 +10,8 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+import Provider from "@/Provider/Provider";
+import MainRoot from "@/Components/Main/MainRoot";
 const queryClient = new QueryClient()
 
 

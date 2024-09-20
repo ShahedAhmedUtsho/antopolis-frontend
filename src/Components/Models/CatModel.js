@@ -43,7 +43,7 @@ const CatModel = () => {
                 <h6>
                     Add Category
                 </h6>
-                <input type="text" name='name' placeholder="Name" className=" h-12 bg-gray-200 mt-5 py-3 px-4 text-black placeholder:text-black w-full rounded-lg focus:outline outline-black" />
+                <input type="text" required name='name' placeholder="Name" className=" h-12 bg-gray-200 mt-5 py-3 px-4 text-black placeholder:text-black w-full rounded-lg focus:outline outline-black" />
                 <button type='submit' className=" mt-auto text-lg text-white bg-black rounded-lg w-full h-12 ">
                     {loading ? "Saving..." : "Save"}
 

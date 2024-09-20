@@ -11,7 +11,8 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query'
 import Provider from "@/Provider/Provider";
-import MainRoot from "@/Components/Main/MainRoot";
+import MainRoot from "@/components/Main/MainRoot";
+
 const queryClient = new QueryClient()
 
 

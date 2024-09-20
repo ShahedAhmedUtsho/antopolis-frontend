@@ -6,7 +6,7 @@ import CatModel from '../Models/CatModel';
 import NavSection from '../NavSection/NavSection';
 
 const MainRoot = () => {
-    const { selectedFile, setSelectedFile, catModel, setCatModel, animalModel, setAnimalModel, animal } = useProvider()
+    const { selectedFile, setSelectedFile, catModel, setCatModel, animalModel, setAnimalModel, showImages, setShowImages } = useProvider()
 
 
 
@@ -19,7 +19,17 @@ const MainRoot = () => {
 
         <main className="w-screen min-h-screen bg-black/95  lg:p-20 md:py-5 md:px-5">
             <NavSection />
-            <section>
+
+
+
+            <section className='min-h-60 bg-slate-900 flex gap-4 '>
+                {
+                    showImages && showImages?.map((item, index) => <div key={item._id} className='border border-white/50 w-40 h-40'>
+
+
+                    </div>)
+                }
+
 
             </section>
 
